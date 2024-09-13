@@ -1,0 +1,44 @@
+{% extends 'myadmin/common/layout.html' %}
+{% block content %}
+              <div class="card">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">All Inquiry</h6>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-dark">
+                   <tr>
+							  <th>id</th>
+							  <th>Name</th>
+							  <th>Email</th>
+							  <th>Contact</th>
+							  <th>Message</th>
+							  <th>Delete</th>
+							</tr>
+                    </thead>
+                    <tbody>
+                       {% for row in result %}
+							<tr class="active">
+								
+								<td>{{row.id}}</td>
+								<td>{{row.name}}</td>
+								<td>{{row.email}}</td>
+								<td>{{row.contact}}</td>
+								<td>{{row.message}}</td>
+								
+
+								
+								<td>
+									<a href="/user/delete_contact/{{row.id}}"><button class="btn btn-danger">Delete</button></a>
+								</td>
+
+								
+								
+							</tr>
+							{% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-footer"></div>
+              </div>
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'myadmin/common/layout.html' %}
+{% block content %}
+              <div class="card">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">All state</h6>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-dark">
+                      <tr>
+                    <th>
+                      #
+                    </th>
+                    <td>
+                       {{result.user.id}}
+                    </td>
+                  </tr>
+                    </thead>
+                    <tbody>
+                         <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <td>
+                      {{result.user.first_name}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        Last Name
+                    </th>
+                    <td>
+                      {{result.user.last_name}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        Username
+                    </th>
+                    <td>
+                       {{result.user.username}}
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <th>
+                        Email
+                    </th>
+                    <td>
+                      {{result.user.email}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        Contact
+                    </th>
+                    <td>
+                      {{result.contact}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        Date of birth
+                    </th>
+                    <td>
+                      {{result.dob}}
+                    </td>
+                  </tr>
+                   <tr>
+                    <th>
+                        Gender
+                    </th>
+                    <td>
+                      {{result.gender}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                         Address
+                    </th>
+                    <td>
+                      {{result.address}}
+                    </td>
+                  </tr>
+                 
+                  <tr>
+                    <th>
+                        State
+                    </th>
+                    <td>
+                      {{result.state}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        City
+                    </th>
+                    <td>
+                      {{result.city}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                        Area
+                    </th>
+                    <td>
+                      {{result.area}}
+                    </td>
+                  </tr>
+                   
+                    </tbody>
+                  </table>
+                </div>
+                <div class="card-footer"></div>
+              </div>
+{% endblock %}

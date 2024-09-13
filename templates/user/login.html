@@ -1,0 +1,71 @@
+{% extends 'user/layout.html' %}
+{% block content %}
+
+            
+{% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+   		<div class="page-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-10 text-center">
+						<h1 class="text-uppercase">Login</h1>
+						<p class="lead">Login to start your app....</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row justify-content-center" style="margin-left: 400px">
+				<div class="col-md-6">
+					
+
+					<div class="section-row">
+						<div class="section-title text-center" style="margin-right: 10px">
+							<h2 class="title">Login</h2>
+						</div>
+					<form name="sentMessage" id="contactForm" novalidate="novalidate" method="post" action="/user/login_check">
+                {% csrf_token %}
+                <div class="form-row">
+                   
+                    <div class="control-group col-sm-12 pb-3">
+                        <label>User Name :</label>
+                        <input type="text" class="form-control p-4" id="username" name="username" placeholder="UserName"
+                            required="required" data-validation-required-message="Please enter your last name" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    
+                    <div class="control-group col-sm-12 pb-3">
+                        <label>Password :</label>
+                        <input type="password" class="form-control p-4" id="password" name="password" placeholder="Password"
+                            required="required" data-validation-required-message="Please enter your password" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                   
+                    
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary py-3 px-5" type="submit" id="submit">Login</button>
+                </div>
+            </form>
+					</div>
+				</div>
+			
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+
+
+            
+{% endblock %}
